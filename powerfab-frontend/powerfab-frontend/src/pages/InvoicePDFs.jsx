@@ -11,7 +11,7 @@ function InvoicePDFs() {
   const [searchText, setSearchText] = useState("");
   const [loading, setLoading] = useState(false);
 
-  
+
   useEffect(() => {
     loadInvoices();
   }, []);
@@ -21,38 +21,77 @@ function InvoicePDFs() {
   // Load Invoice PDFs
   // ============================
 
- const API_URL = "http://localhost:8080/api/invoices";
+  const loadInvoices = async () => {
 
-const loadInvoices = async () => {
-  try {
-    setLoading(true);
+    try {
 
-    const response = await fetch(`${API_URL}/pdfs`);
+      setLoading(true);
 
-    console.log("Status:", response.status);
+      const response = await fetch(
+        "http://localhost:8080/api/invoices/pdfs"
+      );
 
-    if (!response.ok) {
-      throw new Error(`HTTP ${response.status}`);
-    }
 
-    const data = await response.json();
+      if (!response.ok) {
 
-    console.log("Invoice API Response:", data);
+        throw new Error(
+          "API Error : " + response.status
+        );
 
-    if (Array.isArray(data)) {
-      setInvoices(data);
-    } else if (Array.isArray(data.data)) {
-      setInvoices(data.data);
-    } else {
+      }
+
+
+      const data = await response.json();
+
+
+      console.log("Invoice API Response:", data);
+
+
+
+      // Check API response is Array
+
+      if (Array.isArray(data)) {
+
+        setInvoices(data);
+
+      } 
+      else if(data.data && Array.isArray(data.data)) {
+
+        setInvoices(data.data);
+
+      }
+      else {
+
+        console.error(
+          "Invalid API Response",
+          data
+        );
+
+        setInvoices([]);
+
+      }
+
+
+
+    } catch(error) {
+
+
+      console.error(
+        "Error loading PDFs : ",
+        error
+      );
+
       setInvoices([]);
+
+
+    } finally {
+
+      setLoading(false);
+
     }
-  } catch (err) {
-    console.error("Load Error:", err);
-    setInvoices([]);
-  } finally {
-    setLoading(false);
-  }
-};
+
+  };
+
 
 
   // ============================
@@ -61,39 +100,96 @@ const loadInvoices = async () => {
 
 
   const uploadPDF = async () => {
-  if (!selectedFile) {
-    alert("Please select a PDF.");
-    return;
-  }
 
-  const formData = new FormData();
-  formData.append("invoiceId", "1");
-  formData.append("file", selectedFile);
 
-  try {
-    const response = await fetch(`${API_URL}/pdfs/upload`, {
-      method: "POST",
-      body: formData,
-    });
+    if(!selectedFile){
 
-    console.log("Upload Status:", response.status);
+      alert(
+        "Please select PDF file"
+      );
 
-    if (!response.ok) {
-      const text = await response.text();
-      console.log(text);
-      throw new Error("Upload failed");
+      return;
+
     }
 
-    alert("Upload Successful");
 
-    setSelectedFile(null);
 
-    loadInvoices();
-  } catch (err) {
-    console.error(err);
-    alert("Upload Failed");
-  }
-};
+    const formData = new FormData();
+
+
+    formData.append(
+      "invoiceId",
+      1
+    );
+
+
+    formData.append(
+      "file",
+      selectedFile
+    );
+
+
+
+    try{
+
+
+      const response = await fetch(
+
+        "http://localhost:8080/api/invoices/pdfs/upload",
+
+        {
+
+          method:"POST",
+
+          body:formData
+
+        }
+
+      );
+
+
+
+      if(response.ok){
+
+
+        alert(
+          "PDF Uploaded Successfully"
+        );
+
+
+        setSelectedFile(null);
+
+
+        loadInvoices();
+
+
+
+      }
+      else{
+
+
+        alert(
+          "Upload Failed"
+        );
+
+
+      }
+
+
+
+    }
+    catch(error){
+
+
+      console.error(
+        error
+      );
+
+
+    }
+
+
+  };
 
 
 

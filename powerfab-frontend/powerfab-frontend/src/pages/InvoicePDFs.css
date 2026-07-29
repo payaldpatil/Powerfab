@@ -1,0 +1,340 @@
+/* =========================
+   PAGE
+========================= */
+
+.invoice-pdf-page {
+  min-height: 100vh;
+
+  background: #f5f7fa;
+}
+
+
+/* =========================
+   MAIN CONTENT
+========================= */
+
+.invoice-main-content {
+
+  margin-left: 257px;
+
+  margin-top: 82px;
+
+  height: calc(100vh - 82px);
+
+  padding: 28px 32px;
+
+  background: #f5f7fa;
+
+  overflow-y: auto;
+
+  overflow-x: hidden;
+}
+
+
+/* =========================
+   PAGE HEADER
+========================= */
+
+.page-header {
+
+  display: flex;
+
+  justify-content: space-between;
+
+  align-items: center;
+
+  margin-bottom: 24px;
+
+}
+
+
+.page-header h1 {
+
+  margin: 0;
+
+  font-size: 28px;
+
+  font-weight: 600;
+
+  color: #14213d;
+
+}
+
+
+.page-header p {
+
+  margin-top: 8px;
+
+  color: #6b7280;
+
+  font-size: 14px;
+
+}
+
+
+/* =========================
+   UPLOAD BUTTON
+========================= */
+
+.upload-btn {
+
+  background: #1769d1;
+
+  color: white;
+
+  border: none;
+
+  padding: 12px 20px;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  cursor: pointer;
+
+}
+
+
+.upload-btn:hover {
+
+  background: #0f56b3;
+
+}
+
+
+/* =========================
+   PDF CARD
+========================= */
+
+.pdf-card {
+
+  width: 100%;
+
+  background: #ffffff;
+
+  border-radius: 10px;
+
+  border: 1px solid #e1e5eb;
+
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+
+  overflow: hidden;
+
+}
+
+
+/* =========================
+   SEARCH
+========================= */
+
+.search-pdf {
+
+  padding: 18px 20px;
+
+  border-bottom: 1px solid #e5e7eb;
+
+}
+
+
+.search-pdf input {
+
+  width: 100%;
+
+  max-width: 420px;
+
+  padding: 11px 14px;
+
+  border: 1px solid #d1d5db;
+
+  border-radius: 6px;
+
+  font-size: 14px;
+
+  outline: none;
+
+}
+
+
+.search-pdf input:focus {
+
+  border-color: #1769d1;
+
+  box-shadow: 0 0 0 2px rgba(23, 105, 209, 0.1);
+
+}
+
+
+/* =========================
+   TABLE CONTAINER
+========================= */
+
+.table-container {
+
+  width: 100%;
+
+  overflow-x: auto;
+
+}
+
+
+/* =========================
+   TABLE
+========================= */
+
+table {
+
+  width: 100%;
+
+  min-width: 850px;
+
+  border-collapse: collapse;
+
+}
+
+
+thead {
+
+  background: #f8fafc;
+
+}
+
+
+th {
+
+  text-align: left;
+
+  padding: 15px 20px;
+
+  font-size: 13px;
+
+  color: #475569;
+
+  font-weight: 600;
+
+  border-bottom: 1px solid #e5e7eb;
+
+  white-space: nowrap;
+
+}
+
+
+td {
+
+  padding: 16px 20px;
+
+  font-size: 14px;
+
+  color: #374151;
+
+  border-bottom: 1px solid #f0f0f0;
+
+  white-space: nowrap;
+
+}
+
+
+tbody tr:hover {
+
+  background: #f8fafc;
+
+}
+
+
+/* =========================
+   EMPTY MESSAGE
+========================= */
+
+.empty-message {
+
+  text-align: center;
+
+  padding: 100px 20px;
+
+  color: #9ca3af;
+
+  font-size: 15px;
+
+}
+
+
+/* =========================
+   ACTION BUTTONS
+========================= */
+
+.view-btn {
+
+  background: #e0f2fe;
+
+  color: #0369a1;
+
+  border: none;
+
+  padding: 8px 13px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+  margin-right: 8px;
+
+}
+
+
+.download-btn {
+
+  background: #dcfce7;
+
+  color: #15803d;
+
+  border: none;
+
+  padding: 8px 13px;
+
+  border-radius: 5px;
+
+  cursor: pointer;
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+
+  .invoice-main-content {
+
+    margin-left: 257px;
+
+    padding: 24px;
+
+  }
+
+
+  .page-header {
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 18px;
+
+  }
+
+}
+
+
+@media (max-width: 700px) {
+
+  .invoice-main-content {
+
+    margin-left: 0;
+
+    margin-top: 82px;
+
+    padding: 20px;
+
+  }
+
+}

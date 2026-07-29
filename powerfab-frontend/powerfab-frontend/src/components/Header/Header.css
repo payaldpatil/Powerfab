@@ -1,0 +1,395 @@
+/* =========================
+   TOP HEADER
+========================= */
+
+
+.top-header {
+
+
+  width:100%;
+
+  height:82px;
+
+
+  position:fixed;
+
+
+  top:0;
+
+  left:0;
+
+
+  z-index:1000;
+
+
+  background:#ffffff;
+
+
+  border-bottom:1px solid #e5e7eb;
+
+
+  display:flex;
+
+
+  align-items:center;
+
+
+  padding:0 25px;
+
+
+  box-sizing:border-box;
+
+
+}
+
+
+
+/* =========================
+   LOGO
+========================= */
+
+
+.brand-logo{
+
+
+display:flex;
+
+
+align-items:center;
+
+
+gap:14px;
+
+
+}
+
+
+
+/* LOGO ICON */
+
+
+.logo-icon{
+
+
+width:52px;
+
+
+height:52px;
+
+
+border-radius:12px;
+
+
+
+background:linear-gradient(
+135deg,
+#1769d4,
+#0c3f91
+);
+
+
+
+color:white;
+
+
+display:flex;
+
+
+align-items:center;
+
+
+justify-content:center;
+
+
+
+font-size:30px;
+
+
+font-weight:800;
+
+
+
+clip-path:polygon(
+50% 0%,
+100% 25%,
+100% 75%,
+50% 100%,
+0% 75%,
+0% 25%
+);
+
+
+}
+
+
+
+/* TEXT */
+
+
+.brand-text{
+
+
+line-height:1;
+
+
+}
+
+
+
+.brand-text h1{
+
+
+margin:0;
+
+
+font-size:26px;
+
+
+letter-spacing:1px;
+
+
+color:#0c2d66;
+
+
+font-weight:800;
+
+
+}
+
+
+
+.brand-text span{
+
+
+display:block;
+
+
+margin-top:6px;
+
+
+font-size:12px;
+
+
+letter-spacing:5px;
+
+
+color:#0c2d66;
+
+
+font-weight:600;
+
+
+}
+
+
+
+
+
+/* =========================
+ MOBILE BUTTON
+========================= */
+
+
+.mobile-menu-btn{
+
+
+display:none;
+
+
+}
+
+
+
+
+
+/* =========================
+ TABLET
+========================= */
+
+
+@media(max-width:1000px){
+
+
+
+.top-header{
+
+
+padding:0 15px;
+
+
+}
+
+
+
+.logo-icon{
+
+
+width:45px;
+
+
+height:45px;
+
+
+font-size:25px;
+
+
+}
+
+
+
+.brand-text h1{
+
+
+font-size:20px;
+
+
+}
+
+
+
+.brand-text span{
+
+
+font-size:10px;
+
+
+letter-spacing:3px;
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+/* =========================
+ MOBILE VIEW
+========================= */
+
+
+@media(max-width:600px){
+
+
+
+.top-header{
+
+
+height:110px;
+
+
+display:flex;
+
+
+flex-direction:column;
+
+
+align-items:flex-start;
+
+
+justify-content:center;
+
+
+padding:10px 15px;
+
+
+}
+
+
+
+/* LOGO */
+
+
+.brand-logo{
+
+
+gap:10px;
+
+
+}
+
+
+
+.logo-icon{
+
+
+width:38px;
+
+
+height:38px;
+
+
+font-size:22px;
+
+
+}
+
+
+
+.brand-text h1{
+
+
+font-size:18px;
+
+
+}
+
+
+
+.brand-text span{
+
+
+font-size:9px;
+
+
+letter-spacing:3px;
+
+
+}
+
+
+
+
+
+/* HAMBURGER BUTTON */
+
+
+.mobile-menu-btn{
+
+
+display:block;
+
+
+margin-top:8px;
+
+
+border:none;
+
+
+background:#0c2d66;
+
+
+color:white;
+
+
+border-radius:6px;
+
+
+padding:6px 18px;
+
+
+font-size:15px;
+
+
+cursor:pointer;
+
+
+}
+
+
+
+}

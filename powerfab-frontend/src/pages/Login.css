@@ -1,0 +1,365 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+
+html,
+body,
+#root {
+
+  width:100%;
+  height:100%;
+
+  overflow:hidden;
+
+}
+
+
+
+/* FULL PAGE */
+
+.login-page {
+
+  width:100%;
+  height:100vh;
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  padding:20px;
+
+  background-image:url("../assets/Export_import.png");
+
+  background-size:cover;
+
+  background-position:center;
+
+  background-repeat:no-repeat;
+
+  position:relative;
+
+  overflow:hidden;
+
+}
+
+
+
+/* OVERLAY */
+
+.login-page::before {
+
+  content:"";
+
+  position:absolute;
+
+  inset:0;
+
+  background:rgba(0,0,0,0.35);
+
+}
+
+
+
+/* LOGIN BOX */
+
+.login-card {
+
+  position:relative;
+
+  z-index:2;
+
+  width:420px;
+
+  max-width:100%;
+
+  background:rgba(255,255,255,0.96);
+
+  border-radius:25px;
+
+  padding:40px;
+
+  box-shadow:
+  0 15px 40px rgba(0,0,0,0.35);
+
+}
+
+
+
+/* LOGIN CONTENT */
+
+.login-left {
+
+  width:100%;
+
+  display:flex;
+
+  flex-direction:column;
+
+}
+
+
+
+/* LOGO */
+
+.logo {
+
+  display:flex;
+
+  justify-content:center;
+
+  align-items:center;
+
+  margin-bottom:25px;
+
+}
+
+
+.logo img {
+
+  width:180px;
+
+  max-width:100%;
+
+  height:auto;
+
+}
+
+
+
+/* FORM */
+
+.login-left form {
+
+  width:100%;
+
+}
+
+
+label {
+
+  display:block;
+
+  font-size:15px;
+
+  font-weight:600;
+
+  color:#333;
+
+  margin-bottom:7px;
+
+}
+
+
+
+/* INPUT */
+
+input[type="text"],
+input[type="password"] {
+
+  width:100%;
+
+  height:45px;
+
+  padding:10px 15px;
+
+  margin-bottom:18px;
+
+  border:1px solid #ddd;
+
+  border-radius:10px;
+
+  font-size:15px;
+
+}
+
+
+input:focus {
+
+  outline:none;
+
+  border-color:#005c84;
+
+}
+
+
+
+/* REMEMBER */
+
+.remember {
+
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  margin-bottom:20px;
+
+  font-size:14px;
+
+}
+
+
+.remember-me {
+
+  display:flex;
+
+  align-items:center;
+
+  gap:8px;
+
+}
+
+
+.remember-me input {
+
+  width:auto;
+
+}
+
+
+.remember a {
+
+  color:#005c84;
+
+  text-decoration:none;
+
+}
+
+
+
+/* BUTTON */
+
+button {
+
+  width:100%;
+
+  height:45px;
+
+  background:#005c84;
+
+  color:white;
+
+  border:none;
+
+  border-radius:10px;
+
+  font-size:17px;
+
+  cursor:pointer;
+
+}
+
+
+button:hover {
+
+  background:#0077aa;
+
+}
+
+
+button:disabled {
+
+  background:gray;
+
+}
+
+
+
+/* TABLET */
+
+@media(max-width:768px){
+
+
+.login-card {
+
+  width:380px;
+
+  padding:30px;
+
+}
+
+
+.logo img {
+
+  width:150px;
+
+}
+
+
+}
+
+
+
+/* MOBILE */
+
+@media(max-width:480px){
+
+
+.login-page {
+
+  padding:10px;
+
+}
+
+
+.login-card {
+
+  width:100%;
+
+  padding:25px 20px;
+
+  border-radius:18px;
+
+}
+
+
+.logo {
+
+  margin-bottom:20px;
+
+}
+
+
+.logo img {
+
+  width:130px;
+
+}
+
+
+input[type="text"],
+input[type="password"] {
+
+  height:42px;
+
+}
+
+
+button {
+
+  height:42px;
+
+  font-size:16px;
+
+}
+
+
+.remember {
+
+  flex-direction:column;
+
+  align-items:flex-start;
+
+  gap:12px;
+
+}
+
+
+}
