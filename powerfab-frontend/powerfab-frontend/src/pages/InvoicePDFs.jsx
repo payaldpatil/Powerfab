@@ -28,7 +28,8 @@ function InvoicePDFs() {
       setLoading(true);
 
       const response = await fetch(
-        "https://railway.app/api/invoices/pdfs"
+        // "http://localhost:8080/api/invoices/pdfs"
+        "https://railway.app"
       );
 
 
@@ -135,7 +136,7 @@ function InvoicePDFs() {
 
       const response = await fetch(
 
-        "https://railway.app/api/invoices/pdfs/upload",
+        "http://localhost:8080/api/invoices/pdfs/upload",
 
         {
 
@@ -491,7 +492,7 @@ function InvoicePDFs() {
 
                         window.open(
 
-                          `https://railway.app/api/invoices/pdfs/${invoice.id}/view`,
+                          `http://localhost:8080/api/invoices/pdfs/${invoice.id}/view`,
 
                           "_blank"
 
@@ -520,7 +521,7 @@ function InvoicePDFs() {
 
                         window.open(
 
-                          `https://railway.app/api/invoices/pdfs/${invoice.id}/download`
+                          `http://localhost:8080/api/invoices/pdfs/${invoice.id}/download`
 
                         )
 
