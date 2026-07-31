@@ -23,7 +23,8 @@ function InvoicePDFs() {
 
 //  const API_URL = "http://localhost:8080/api/invoices";
 
-const API_URL = "https://railway.app";
+// const API_URL = "https://railway.app";
+const API_URL = "https://powerfab-production.up.railway.app";
 
 const loadInvoices = async () => {
   try {
@@ -397,7 +398,8 @@ const loadInvoices = async () => {
 
                         window.open(
 
-                          `http://localhost:8080/api/invoices/pdfs/${invoice.id}/view`,
+                          // `http://localhost:8080/api/invoices/pdfs/${invoice.id}/view`,
+                          `https://powerfab-production.up.railway.app/api/invoices/pdfs/${invoice.id}/view`,
 
                           "_blank"
 
@@ -426,7 +428,8 @@ const loadInvoices = async () => {
 
                         window.open(
 
-                          `http://localhost:8080/api/invoices/pdfs/${invoice.id}/download`
+                          // `http://localhost:8080/api/invoices/pdfs/${invoice.id}/download`
+                          `https://powerfab-production.up.railway.app/api/invoices/pdfs/${invoice.id}/download`
 
                         )
 

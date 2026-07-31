@@ -29,7 +29,8 @@ function InvoicePDFs() {
 
       const response = await fetch(
         // "http://localhost:8080/api/invoices/pdfs"
-        "https://railway.app"
+        // "https://railway.app"
+        "https://powerfab-production.up.railway.app"
       );
 
 
@@ -136,7 +137,8 @@ function InvoicePDFs() {
 
       const response = await fetch(
 
-        "http://localhost:8080/api/invoices/pdfs/upload",
+        // "http://localhost:8080/api/invoices/pdfs/upload",
+        "https://powerfab-production.up.railway.app/api/invoices/pdfs/upload",
 
         {
 
@@ -492,7 +494,8 @@ function InvoicePDFs() {
 
                         window.open(
 
-                          `http://localhost:8080/api/invoices/pdfs/${invoice.id}/view`,
+                          // `http://localhost:8080/api/invoices/pdfs/${invoice.id}/view`,
+                          `https://powerfab-production.up.railway.app/api/invoices/pdfs/${invoice.id}/view`,
 
                           "_blank"
 
@@ -521,7 +524,8 @@ function InvoicePDFs() {
 
                         window.open(
 
-                          `http://localhost:8080/api/invoices/pdfs/${invoice.id}/download`
+                          // `http://localhost:8080/api/invoices/pdfs/${invoice.id}/download`
+                          `https://powerfab-production.up.railway.app/api/invoices/pdfs/${invoice.id}/download`
 
                         )
 
