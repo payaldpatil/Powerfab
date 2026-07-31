@@ -21,7 +21,7 @@ function InvoicePDFs() {
   // Load Invoice PDFs
   // ============================
 
- const API_URL = "http://localhost:8080/api/invoices";
+ const API_URL = "http://railway.app/api/invoices";
 
 const loadInvoices = async () => {
   try {
@@ -395,7 +395,7 @@ const loadInvoices = async () => {
 
                         window.open(
 
-                          `http://localhost:8080/api/invoices/pdfs/${invoice.id}/view`,
+                          `http://railway.app/api/invoices/pdfs/${invoice.id}/view`,
 
                           "_blank"
 
@@ -424,7 +424,7 @@ const loadInvoices = async () => {
 
                         window.open(
 
-                          `http://localhost:8080/api/invoices/pdfs/${invoice.id}/download`
+                          `http://railway.app/api/invoices/pdfs/${invoice.id}/download`
 
                         )
 
